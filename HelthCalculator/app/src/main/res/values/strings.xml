@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HelthCalculator</string>
+    <string name="a_m_company"><![CDATA[A&M Company]]></string>
+    <string name="start">Start</string>
+    <string name="age">Wiek</string>
+    <string name="name">Imię</string>
+    <string name="Weight">Waga</string>
+    <string name="height">Wzrost</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="choose_activity">Wybierz Aktyność</string>
+    <string name="calculate">Oblicz</string>
+
+    <string-array name="pal">
+        <item>1,2</item>
+        <item>1,4</item>
+        <item>1,6</item>
+        <item>1,8</item>
+        <item>2</item>
+    </string-array>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "720939324679",
+    "project_id": "calchelthapp-c0911",
+    "storage_bucket": "calchelthapp-c0911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720939324679:android:8cd22ed4c637a792d821a2",
+        "android_client_info": {
+          "package_name": "com.example.helthcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720939324679-0pv55uf54e8mhfsnqk4i4im3no7hj1sm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.helthcalculator",
+            "certificate_hash": "2f433e31d80e193ee3f1a3cbdc13b5626db70499"
+          }
+        },
+        {
+          "client_id": "720939324679-dkhn1il9cji7p40gvc5kasqvsojvt9tp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMkpg7TxyMlAQ2xIsMHSbHqU_NPAGwHS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720939324679-dkhn1il9cji7p40gvc5kasqvsojvt9tp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
