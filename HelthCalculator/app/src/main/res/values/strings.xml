@@ -10,12 +10,16 @@
     <string name="cm">cm</string>
     <string name="choose_activity">Wybierz Aktyność</string>
     <string name="calculate">Oblicz</string>
+    <string name="basic_metabolism">PPM</string>
+    <string name="bialko">Białko:</string>
+    <string name="tluszcz">Tłuszcz</string>
+    <string name="weglowodany">Węglowodany</string>
 
     <string-array name="pal">
-        <item>1,2</item>
-        <item>1,4</item>
-        <item>1,6</item>
-        <item>1,8</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.6</item>
+        <item>1.8</item>
         <item>2</item>
     </string-array>
 </resources>

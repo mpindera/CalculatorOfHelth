@@ -1,5 +1,6 @@
 package com.example.helthcalculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -34,7 +35,7 @@ class InfoActivity : AppCompatActivity() {
     var gender: String? = null
 
     private var valueOfPPM: Int = 0
-    private var valueOfCPM: Int = 0
+    private var valueOfCPM: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,14 +94,17 @@ class InfoActivity : AppCompatActivity() {
                     "Name" to usernameText,
                     "Age" to userAgeText.toInt(),
                     "Weight" to userWeightText.toDouble(),
-                    "Height" to userHeightText.toDouble()
+                    "Height" to userHeightText.toDouble(),
+                    "Basic Metabolism" to valueOfCPM
                 )
-
-
 
                 FirebaseFirestore.getInstance().collection("Patient").add(patientInfo)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Pacjent został dodany", Toast.LENGTH_SHORT).show()
+                        val intentToDiet = Intent(this, BasicOfDiet::class.java)
+                        intentToDiet.putExtra("CPM", valueOfCPM)
+
+                        startActivity(intentToDiet)
                     }
                     .addOnFailureListener { e ->
                         Log.w("TAG2", "Error adding document", e)
@@ -139,6 +143,15 @@ class InfoActivity : AppCompatActivity() {
     }
 
     private fun calculateCPM() {
-        valueOfCPM = valueOfPAL.toInt() * valueOfPPM
+        valueOfCPM = (valueOfPAL.toDouble() * valueOfPPM).roundToInt()
     }
+
+
+    /*
+    Dieta podstawowa
+    - 15,5% Białko / 4
+    - 29,5% Tłuszcz / 9
+    - 55% Węglowodany / 4
+    */
+
 }
