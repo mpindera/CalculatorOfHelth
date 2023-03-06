@@ -11,9 +11,10 @@
     <string name="choose_activity">Wybierz Aktyność</string>
     <string name="calculate">Oblicz</string>
     <string name="basic_metabolism">PPM</string>
-    <string name="bialko">Białko:</string>
-    <string name="tluszcz">Tłuszcz</string>
-    <string name="weglowodany">Węglowodany</string>
+    <string name="protein">Białko:</string>
+    <string name="fat">Tłuszcz:</string>
+    <string name="carbohydrates">Węglowodany:</string>
+    <string name="choose_diet">Wybierz dietę</string>
 
     <string-array name="pal">
         <item>1.2</item>

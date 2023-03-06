@@ -43,19 +43,20 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:letterSpacing="0.1"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="10dp"
-                            android:text="PPM"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="10dp"
+                            android:text="PPM:"
                             android:textSize="20sp" />
 
                         <TextView
+                            android:id="@+id/TVOfPPM"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:gravity="center"
                             android:letterSpacing="0.1"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="10dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="10dp"
                             android:text="1823"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -77,6 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="35dp"
+                        android:gravity="center"
                         android:background="@drawable/background_of_metabolism_context">
 
                         <TextView
@@ -84,7 +86,31 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:padding="20dp"
-                            android:text="@string/bialko"
+                            android:text="@string/protein"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/TVOfProtein"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bodoni_moda_medium_italic"
+                            android:paddingStart="35dp"
+                            android:text="128"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="35dp"
+                        android:background="@drawable/background_of_metabolism_context">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bodoni_moda_medium_italic"
+                            android:padding="20dp"
+                            android:text="@string/fat"
                             android:textSize="20sp" />
 
                         <TextView
@@ -108,31 +134,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:padding="20dp"
-                            android:text="@string/tluszcz"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:gravity="start"
-                            android:paddingLeft="35dp"
-                            android:text="128"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="35dp"
-                        android:background="@drawable/background_of_metabolism_context">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:padding="20dp"
-                            android:text="@string/weglowodany"
+                            android:text="@string/carbohydrates"
                             android:textSize="20sp" />
 
                         <TextView
@@ -144,6 +146,12 @@
                             android:text="89"
                             android:textSize="20sp" />
                     </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_diet"
+                        />
                 </LinearLayout>
 
             </LinearLayout>
