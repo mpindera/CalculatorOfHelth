@@ -34,7 +34,7 @@ class InfoActivity : AppCompatActivity() {
     var selectImageWoman = false
     var gender: String? = null
 
-    private var valueOfPPM: Int = 0
+    private var valueOfPPM: Int? = null
     private var valueOfCPM: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,13 +95,16 @@ class InfoActivity : AppCompatActivity() {
                     "Age" to userAgeText.toInt(),
                     "Weight" to userWeightText.toDouble(),
                     "Height" to userHeightText.toDouble(),
-                    "Basic Metabolism" to valueOfCPM
+                    "PPM" to valueOfPPM,
+                    "CPM" to valueOfCPM
                 )
 
                 FirebaseFirestore.getInstance().collection("Patient").add(patientInfo)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Pacjent został dodany", Toast.LENGTH_SHORT).show()
                         val intentToDiet = Intent(this, BasicOfDiet::class.java)
+
+                        intentToDiet.putExtra("PPM", valueOfPPM)
                         intentToDiet.putExtra("CPM", valueOfCPM)
 
                         startActivity(intentToDiet)
@@ -143,15 +146,6 @@ class InfoActivity : AppCompatActivity() {
     }
 
     private fun calculateCPM() {
-        valueOfCPM = (valueOfPAL.toDouble() * valueOfPPM).roundToInt()
+        valueOfCPM = (valueOfPAL.toDouble() * valueOfPPM!!).roundToInt()
     }
-
-
-    /*
-    Dieta podstawowa
-    - 15,5% Białko / 4
-    - 29,5% Tłuszcz / 9
-    - 55% Węglowodany / 4
-    */
-
 }
