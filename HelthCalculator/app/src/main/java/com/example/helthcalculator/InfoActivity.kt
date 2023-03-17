@@ -5,11 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import com.example.helthcalculator.data.DataAboutPatient
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import java.util.*
 import kotlin.math.roundToInt
 
@@ -29,13 +28,13 @@ class InfoActivity : AppCompatActivity() {
     private var userWeightText: String = ""
     private var userHeightText: String = ""
 
-    var valueOfPAL = ""
-    var selectImageMan = false
-    var selectImageWoman = false
-    var gender: String? = null
+    private var valueOfPAL = ""
+    private var selectImageMan = false
+    private var selectImageWoman = false
+    private var gender: String = ""
 
-    private var valueOfPPM: Int? = null
-    private var valueOfCPM: Int? = null
+    private var valueOfPPM: Int = 0
+    private var valueOfCPM: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,15 +87,14 @@ class InfoActivity : AppCompatActivity() {
                 calculateCPM()
 
                 val patientID = UUID.randomUUID().toString()
-                val patientInfo = hashMapOf(
-                    "Gender" to gender,
-                    "patientID" to patientID,
-                    "Name" to usernameText,
-                    "Age" to userAgeText.toInt(),
-                    "Weight" to userWeightText.toDouble(),
-                    "Height" to userHeightText.toDouble(),
-                    "PPM" to valueOfPPM,
-                    "CPM" to valueOfCPM
+                val patientInfo = DataAboutPatient(
+                    patientID,
+                    usernameText,
+                    gender,
+                    userAgeText.toInt(),
+                    userWeightText.toDouble(),
+                    userHeightText.toDouble(),
+                    valueOfPPM, valueOfCPM
                 )
 
                 FirebaseFirestore.getInstance().collection("Patient").add(patientInfo)
