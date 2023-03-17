@@ -48,7 +48,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:letterSpacing="0.1"
                             android:paddingStart="5dp"
                             android:paddingEnd="10dp"
@@ -59,7 +58,6 @@
                             android:id="@+id/TVOfPPM"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:gravity="center"
                             android:letterSpacing="0.1"
                             android:paddingStart="5dp"
@@ -76,7 +74,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:letterSpacing="0.1"
                             android:paddingStart="5dp"
                             android:paddingEnd="10dp"
@@ -87,7 +84,6 @@
                             android:id="@+id/TVOfCPM"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:gravity="center"
                             android:letterSpacing="0.1"
                             android:paddingStart="5dp"
@@ -104,7 +100,6 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="15dp"
-                    android:background="@drawable/background_of_metabolism"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -112,23 +107,29 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="35dp"
-                        android:background="@drawable/background_of_metabolism_context"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:background="@drawable/background_of_metabolism_context">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:padding="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:paddingStart="10dp"
                             android:text="@string/protein"
                             android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/TVOfProtein"
-                            android:layout_width="match_parent"
+                            android:id="@+id/tvProteinValue"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:paddingStart="35dp"
+                            android:paddingStart="6dp"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gram"
+                            android:paddingStart="1dp"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -136,22 +137,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="35dp"
+                        android:gravity="center"
                         android:background="@drawable/background_of_metabolism_context">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:padding="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:paddingStart="10dp"
                             android:text="@string/fat"
                             android:textSize="20sp" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:id="@+id/tvFatValue"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:gravity="start"
-                            android:paddingLeft="35dp"
+                            android:paddingLeft="6dp"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gram"
+                            android:paddingStart="1dp"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -159,22 +168,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="35dp"
+                        android:gravity="center"
                         android:background="@drawable/background_of_metabolism_context">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
-                            android:padding="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:paddingStart="10dp"
                             android:text="@string/carbohydrates"
                             android:textSize="20sp" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:id="@+id/tvCarbohydratesValue"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/bodoni_moda_medium_italic"
                             android:gravity="start"
-                            android:paddingStart="35dp"
+                            android:paddingStart="6dp"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gram"
+                            android:paddingStart="1dp"
                             android:textSize="20sp" />
                     </LinearLayout>
 

@@ -104,8 +104,8 @@ class InfoActivity : AppCompatActivity() {
                         Toast.makeText(this, "Pacjent został dodany", Toast.LENGTH_SHORT).show()
                         val intentToDiet = Intent(this, BasicOfDiet::class.java)
 
-                        intentToDiet.putExtra("PPM", valueOfPPM)
-                        intentToDiet.putExtra("CPM", valueOfCPM)
+                        intentToDiet.putExtra("ppmValue", valueOfPPM.toString())
+                        intentToDiet.putExtra("cpmValue", valueOfCPM.toString())
 
                         startActivity(intentToDiet)
                     }
@@ -134,7 +134,7 @@ class InfoActivity : AppCompatActivity() {
                 || (selectImageMan && !selectImageWoman)))
     }
 
-    private fun calculatePPM() {
+    private fun calculatePPM(): Int {
         //man: PPM = 66,5 + (13,75 x masa ciała [kg]) + (5,003 x wzrost [cm]) - (6,775 x wiek w latach)
         //woman: PPM = 655 + (9,563 x masa ciała [kg]) + (1,85 x wzrost [cm]) - (4,676 x wiek w latach)
 
@@ -143,6 +143,7 @@ class InfoActivity : AppCompatActivity() {
         } else {
             (655 + (9.563 * userWeightText.toDouble()) + (1.85 * userHeightText.toInt()) - (4.676 * userAgeText.toInt())).toInt()
         }
+        return valueOfPPM as Int
     }
 
     private fun calculateCPM() {

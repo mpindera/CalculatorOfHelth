@@ -16,6 +16,7 @@
     <string name="carbohydrates">Węglowodany:</string>
     <string name="choose_diet">Wybierz dietę</string>
     <string name="dieta_podstawowa">Dieta podstawowa</string>
+    <string name="gram">g</string>
 
     <string-array name="pal">
         <item>1.2</item>
