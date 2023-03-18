@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import com.example.helthcalculator.register.RegisterActivity
+import com.example.helthcalculator.registerFragment.FragmentRegister
 
 class ActivitySplash : AppCompatActivity() {
     lateinit var mainSplash: LinearLayout
@@ -15,8 +16,8 @@ class ActivitySplash : AppCompatActivity() {
         mainSplash = findViewById(R.id.mainSplash)
 
         mainSplash.alpha = 0F
-        mainSplash.animate().setDuration(300).alpha(1f).withEndAction {
-            val intentRegister = Intent(this, InfoActivity::class.java)
+        mainSplash.animate().setDuration(200).alpha(1f).withEndAction {
+            val intentRegister = Intent(this, MainMenuActivity::class.java)
             startActivity(intentRegister)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }

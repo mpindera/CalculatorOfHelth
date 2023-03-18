@@ -12,6 +12,9 @@
         android:theme="@style/Theme.HelthCalculator"
         tools:targetApi="31">
         <activity
+            android:name=".MainMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".register.RegisterActivity"
             android:exported="false" />
         <activity

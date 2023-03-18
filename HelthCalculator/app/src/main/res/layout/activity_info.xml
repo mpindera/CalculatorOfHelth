@@ -219,7 +219,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:background="@drawable/bc_button_start"
-            android:text="@string/calculate" />
+            android:text="@string/calculate"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 </LinearLayout>
